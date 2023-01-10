@@ -1,0 +1,9 @@
+<div class="country-modal">
+  <img alt="country" [src]="selectedCountry.flag" />
+  <p><b>Capital:</b> {{ selectedCountry.capital }}</p>
+  <p><b>Continent:</b> {{ selectedCountry.region }}</p>
+  <p><b>Currency:</b> {{ selectedCountry.currencies.toString() }}</p>
+  <p><b>Languages:</b> {{ selectedCountry.languages.toString() }}</p>
+  <p><b>Population:</b> {{ selectedCountry.population }}</p>
+  <p><b>Timezone:</b> {{ selectedCountry.timezone }}</p>
+</div>

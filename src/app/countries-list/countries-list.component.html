@@ -1,0 +1,45 @@
+<div class="countries-list">
+  <div class="country-search">
+    <input type="text" class="form-control" [(ngModel)]="searchTxt" />
+    <button class="btn btn-primary" (click)="onSearchText()">Search</button>
+  </div>
+  <div class="row" *ngIf="paginatedCountries.length > 0">
+    <div class="col-3" *ngFor="let country of paginatedCountries">
+      <div class="country-card" (click)="onSelectCountry(country)">
+        <img alt="country" [src]="country.flag" />
+        <p class="cntname">{{ country.name }}</p>
+        <p>{{ country.region }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-end" *ngIf="paginatedCountries.length > 0">
+    <button
+      class="btn btn-primary m-2"
+      (click)="onPreviousPage()"
+      [disabled]="lastCountryIndex <= 20"
+    >
+      Previous
+    </button>
+    <button
+      class="btn btn-primary m-2"
+      (click)="onNextPage()"
+      [disabled]="lastCountryIndex >= countriesList.length"
+    >
+      Next
+    </button>
+  </div>
+
+  <div class="m-5" *ngIf="paginatedCountries.length <= 0">
+    <h6>No results found</h6>
+  </div>
+</div>
+
+<modal #countryModal>
+  <ng-template #modalHeader
+    ><h6>{{ selectedCountry.name }}</h6></ng-template
+  >
+  <ng-template #modalBody>
+    <app-country-modal [selectedCountry]="selectedCountry"></app-country-modal>
+  </ng-template>
+</modal>

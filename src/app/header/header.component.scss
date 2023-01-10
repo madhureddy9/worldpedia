@@ -1,0 +1,22 @@
+.header {
+  background-color: rgb(2, 61, 150);
+  display: flex;
+  justify-content: space-between;
+  padding: 75px;
+}
+img {
+  height: 80px;
+}
+.left-header-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: white;
+
+  p {
+    margin: 0;
+  }
+
+  p:last-child {
+    float: right;
+  }
+}

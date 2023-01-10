@@ -1,0 +1,30 @@
+.footer {
+  color: white;
+  background-color: rgb(31, 31, 31);
+  padding: 35px 75px;
+}
+img {
+  height: 80px;
+}
+.mail {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    width: 300px;
+    border-radius: 5px;
+  }
+
+  button {
+    width: 180px;
+    border-radius: 5px;
+    margin-top: 20px;
+    align-self: flex-end;
+  }
+}
+
+.footer-txt {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: white;
+}

@@ -1,0 +1,47 @@
+.countries-list {
+  padding: 75px;
+  position: relative;
+}
+
+.country-card {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 270px;
+  margin-bottom: 20px;
+  padding: 15px;
+  cursor: pointer;
+  img {
+    height: 130px;
+    width: 240px;
+    border: 1px solid lightgray;
+  }
+  p {
+    margin: 0;
+  }
+  .cntname {
+    font-weight: bolder;
+    font-size: 16px;
+  }
+}
+
+.country-search {
+  display: flex;
+  padding: 15px;
+  border: 1px solid lightgray;
+  margin-bottom: 20px;
+  width: 86%;
+  border-radius: 2px;
+  position: absolute;
+  top: -40px;
+  background-color: #fff;
+
+  input {
+    border: 1px solid gray;
+    height: 35px;
+    margin-right: 25px;
+  }
+
+  button {
+    width: 120px;
+  }
+}
